@@ -54,3 +54,4 @@ class Lance_tropille(weapon):
             self.ammunitions = self.ammunitions-1
         else:
             super().fire_at(x,y,z)
+def class test allah
