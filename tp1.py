@@ -1,6 +1,6 @@
 
 class weapon :
-    def __init__(self, ammunitions : int, rang : int) :
+    def _init_(self, ammunitions : int, rang : int) :
         self.ammunitions=ammunitions
         self.rang=rang
     
