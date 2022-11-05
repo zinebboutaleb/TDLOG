@@ -1,6 +1,6 @@
 
 class weapon :
-    def _init_(self, ammunitions : int, rang : int) :
+    def __init__(self, ammunitions : int, rang : int) :
         self.ammunitions=ammunitions
         self.rang=rang
     
@@ -12,8 +12,9 @@ class weapon :
  
 
 class Lance_missiles_antisurface (weapon):
-    def __int__(self,ammunitions=30, rang=40):
-        super().__int__(ammunitions, rang )
+    def __init__(self,ammunitions : int, rang : int):
+        self.ammunitions = 30
+        self.rang = 40
       
 
     def fire_at(self, x, y, z):
@@ -22,29 +23,26 @@ class Lance_missiles_antisurface (weapon):
         elif z !=0 :
             print("OutOfRangeError")
             self.ammunitions = self.ammunitions - 1
-        else:
-            super().fire_at(x,y,z)
 
 
 
 class Lance_missiles_anti_air(weapon):
-    def __int__(self,ammunitions=50, rang=40):
-        super().__int__(ammunitions, rang )
-
+    def __init__(self, ammunitions: int, rang: int):
+        self.ammunitions = 50
+        self.rang = 40
     def fire_at(self, x, y, z):
         if self.ammunitions ==0 :
             print( "NoAmmunitionError")
         elif z<=0 :
             print("OutOfRangeError")
             self.ammunitions = self.ammunitions -1
-        else:
-            super().fire_at(x,y,z)
 
 
 
 class Lance_tropille(weapon):
-    def __int__(self,ammunitions=15, rang=20):
-        super().__int__(ammunitions, rang )
+    def __init__(self, ammunitions: int, rang: int):
+        self.ammunitions = 15
+        self.rang = 20
 
     def fire_at(self,ammunitions: int, x: int, y: int, z: int):
         if ammunitions ==0 :
@@ -54,4 +52,3 @@ class Lance_tropille(weapon):
             self.ammunitions = self.ammunitions-1
         else:
             super().fire_at(x,y,z)
-def class test allah
