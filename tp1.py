@@ -50,5 +50,3 @@ class Lance_tropille(weapon):
         if z>0 :
             print("OutOfRangeError")
             self.ammunitions = self.ammunitions-1
-        else:
-            super().fire_at(x,y,z)
