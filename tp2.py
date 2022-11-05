@@ -13,10 +13,12 @@ class vessel:
     def fire_at(self,x,y,z):
         if self.max_hits==0:
             raise IndexError('DestroyedError')
-        if ((x-self.coordinates[0])**2+(y-self.coordinates[1])**2+(z-self.coordinates[2])**2)**(1/2)>self.W.rang:
+        elif ((x-self.coordinates[0])**2+(y-self.coordinates[1])**2+(z-self.coordinates[2])**2)**(1/2)>self.W.rang:
             print(self.W)
             self.W.ammunitions-=1
             raise IndexError('OutOfRangeError')
+        else:
+            self.W.ammunitions-=1
             
 
 
